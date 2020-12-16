@@ -19,7 +19,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Catálogo"
+        android:text="Catálogo Lindo"
         android:textColor="#788616"
         android:textSize="35dp"/>
     <LinearLayout
