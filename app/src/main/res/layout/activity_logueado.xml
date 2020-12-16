@@ -54,14 +54,16 @@
        android:gravity="center">
 
        <ImageView
+           android:id="@+id/imgtoritcas"
            android:layout_width="150dp"
-           android:layout_height="150dp"
+           android:layout_height="180dp"
            android:layout_gravity="center"
            android:src="@mipmap/ic_launcher_foreground" />
        <ImageView
+           android:id="@+id/imgcupcake"
            android:layout_marginLeft="45dp"
            android:layout_width="150dp"
-           android:layout_height="150dp"
+           android:layout_height="180dp"
            android:layout_gravity="center"
            android:src="@mipmap/ic_launcher_foreground" />
 
@@ -70,7 +72,8 @@
     <LinearLayout
         android:layout_width="411dp"
         android:layout_height="5dp"
-        android:background="#785616"/>
+        android:background="#785616"
+        android:layout_marginTop="15dp"/>
 
 
     <LinearLayout
@@ -102,23 +105,57 @@
         android:gravity="center">
 
         <ImageView
+            android:id="@+id/imgminicake"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="180dp"
             android:layout_gravity="center"
-
             android:src="@mipmap/ic_launcher_foreground" />
 
         <ImageView
+            android:id="@+id/minipersonal"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="180dp"
             android:layout_gravity="center"
             android:layout_marginLeft="45dp"
             android:src="@mipmap/ic_launcher_foreground" />
     </LinearLayout>
     <LinearLayout
+        android:layout_marginTop="15dp"
         android:layout_width="411dp"
         android:layout_height="5dp"
         android:background="#785616"/>
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="¿Quieres otro diseño?"
+                android:textSize="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contactanos"
+                android:textColor="#785616"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/phone" />
+
+    </LinearLayout>
 
 </LinearLayout>
