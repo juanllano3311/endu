@@ -54,3 +54,4 @@ public class listarTortica extends AppCompatActivity {
         super.onStop();
         torticadpter.stopListening();
     }
+}
