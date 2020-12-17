@@ -14,12 +14,7 @@ import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
 public class adapterTortica extends FirestoreRecyclerAdapter <Tortica, adapterTortica.ViewHolder>{
 
-/**
- * Create a new RecyclerView adapter that listens to a Firestore Query.  See {@link
- * FirestoreRecyclerOptions} for configuration options.
- *
- * @param options
- */
+
 public adapterTortica(@NonNull FirestoreRecyclerOptions <Tortica> options) {
         super(options);
         }

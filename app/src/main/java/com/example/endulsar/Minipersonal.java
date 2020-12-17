@@ -5,15 +5,25 @@ public class Minipersonal {
     private String Nombre;
     private  String Precio;
     private  String capacidad;
+    private String imagen;
 
     public Minipersonal() {
     }
 
-    public Minipersonal(String id, String nombre, String precio, String capacidad) {
+    public Minipersonal(String id, String nombre, String precio, String capacidad, String imagen) {
         this.id = id;
         Nombre = nombre;
         Precio = precio;
         this.capacidad = capacidad;
+        this.imagen = imagen;
+    }
+
+    public String getImagen(int position) {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 
     public String getId() {

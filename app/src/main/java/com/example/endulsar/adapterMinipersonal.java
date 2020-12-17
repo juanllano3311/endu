@@ -3,6 +3,7 @@ package com.example.endulsar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.squareup.picasso.Picasso;
 
 public class adapterMinipersonal extends FirestoreRecyclerAdapter <Minipersonal, adapterMinipersonal.ViewHolder>{
 
@@ -26,10 +28,18 @@ public class adapterMinipersonal extends FirestoreRecyclerAdapter <Minipersonal,
     @Override
     protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull Minipersonal model) {
 
-        holder.id.setText(model.getId());
+
         holder.nombre.setText(model.getNombre());
         holder.precio.setText(model.getPrecio());
-        holder.capacidad.setText(model.getCapacidad());
+
+        Picasso
+                .get()
+                .load(model.getImagen(position))
+                .resize(200, 200)
+                .placeholder(R.drawable.ic_launcher_background)  // precargado
+                .error(R.drawable.ic_launcher_foreground)        // error de carga
+                .into(holder.imagen);
+
 
     }
 
@@ -44,15 +54,15 @@ public class adapterMinipersonal extends FirestoreRecyclerAdapter <Minipersonal,
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView id,nombre,precio,capacidad;
-
+        TextView nombre,precio;
+        ImageView imagen;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            id = itemView.findViewById(R.id.tvidminipersonal);
+
             nombre = itemView.findViewById(R.id.tvnombreminipersonal);
             precio = itemView.findViewById(R.id.tvpreciominipersonal);
-            capacidad = itemView.findViewById(R.id.tvcapaciddminipersonal);
+           imagen = itemView.findViewById(R.id.etimagen);
 
         }
     }

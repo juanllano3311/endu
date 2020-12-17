@@ -4,20 +4,27 @@ public class Tortica {
     private  String Nombre;
     private String Precio;
     private String capacidad;
-
+    private String imagen;
 
     public Tortica(){
 
     }
 
-
-    public Tortica(String id, String nombre, String precio, String capacidad) {
-        this.id = id;
+    public Tortica(String nombre, String precio, String capacidad, String imagen, String id) {
         Nombre = nombre;
         Precio = precio;
         this.capacidad = capacidad;
+        this.imagen = imagen;
+        this.id = id;
     }
 
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
 
     private String id;
 

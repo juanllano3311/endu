@@ -50,5 +50,4 @@ public class listar_minipersonal extends AppCompatActivity {
         minipersonaladpter.stopListening();
     }
 }
-    }
-            }
+
