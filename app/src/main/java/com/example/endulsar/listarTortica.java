@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-
 import android.os.Bundle;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -32,7 +31,7 @@ public class listarTortica extends AppCompatActivity {
 
         torticafirestore = FirebaseFirestore.getInstance();
 
-        Query query = torticafirestore.collection("tortica");
+        Query query = torticafirestore.collection("Torticas");
 
         FirestoreRecyclerOptions <Tortica> firestoreRecyclerOptions = new FirestoreRecyclerOptions.Builder <Tortica> ()
                 .setQuery(query,Tortica.class).build();
