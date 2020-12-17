@@ -9,8 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Endulsar">
-        <activity android:name=".listarTortica"></activity>
-        <activity android:name=".logueado" />
+        <activity android:name=".logueado"></activity>
         <activity android:name=".registrou" />
         <activity android:name=".MainActivity">
             <intent-filter>
