@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pedido"
+    android:orientation="vertical"
+    android:background="#fefce0">
+
+<LinearLayout
+    android:layout_marginTop="15dp"
+    android:layout_width="412dp"
+    android:layout_height="40dp">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Pedido"
+    android:textSize="30dp"
+    android:textColor="#785616"
+    android:layout_marginLeft="160dp"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="412dp"
+        android:layout_height="3dp"
+        android:background="#785616"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="412dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="250dp"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:gravity="center"
+                android:background="#fefac0"
+                android:padding="5dp"
+                android:textColor="#785616"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="225dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sabores de masas:"
+            android:textSize="20dp"
+            android:textColor="#785616"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="220dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vainilla"
+                    android:textColor="#785616"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Naranja"
+                    android:textColor="#785616"/>
+
+            </RadioGroup>
+            <RadioGroup
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chocolate"
+                    android:textColor="#785616"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Manzana"
+                    android:textColor="#785616"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+        <RadioButton
+            android:layout_marginLeft="275dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mixto"
+            android:textColor="#785616"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>
