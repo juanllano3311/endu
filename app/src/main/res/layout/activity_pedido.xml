@@ -198,9 +198,18 @@
             android:background="#f4eb49"
             android:text="TOTAL..."/>
 
+        <TextView
+            android:id="@+id/tvcalcular"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#fefce0"
+            android:text="Calcular"
+            android:textColor="#785616" />
+
         <Button
             android:id="@+id/btnEnviar"
-            android:layout_marginLeft="120dp"
+            android:layout_marginLeft="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Enviar Pedido"
