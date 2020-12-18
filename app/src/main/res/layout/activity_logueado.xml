@@ -19,7 +19,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Catálogo Lindo"
+        android:text="Categorías"
         android:textColor="#788616"
         android:textSize="35dp"/>
     <LinearLayout
@@ -58,14 +58,14 @@
            android:layout_width="150dp"
            android:layout_height="180dp"
            android:layout_gravity="center"
-           android:src="@mipmap/ic_launcher_foreground" />
+           android:src="@mipmap/fire" />
        <ImageView
            android:id="@+id/imgcupcake"
            android:layout_marginLeft="45dp"
            android:layout_width="150dp"
            android:layout_height="180dp"
            android:layout_gravity="center"
-           android:src="@mipmap/ic_launcher_foreground" />
+           android:src="@mipmap/hombre" />
 
    </LinearLayout>
 
@@ -109,7 +109,7 @@
             android:layout_width="150dp"
             android:layout_height="180dp"
             android:layout_gravity="center"
-            android:src="@mipmap/ic_launcher_foreground" />
+            android:src="@mipmap/batman" />
 
         <ImageView
             android:id="@+id/imgminipersonal"
@@ -117,7 +117,7 @@
             android:layout_height="180dp"
             android:layout_gravity="center"
             android:layout_marginLeft="45dp"
-            android:src="@mipmap/ic_launcher_foreground" />
+            android:src="@mipmap/cactus" />
     </LinearLayout>
     <LinearLayout
         android:layout_marginTop="15dp"
