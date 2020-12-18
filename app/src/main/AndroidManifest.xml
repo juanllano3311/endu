@@ -9,8 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Endulsar">
-        <activity android:name=".listar_cupcakes"></activity>
-        <activity android:name=".listarTortica" />
+        <activity android:name=".listarTortica"></activity>
         <activity android:name=".listar_minipersonal" />
         <activity android:name=".pedido" />
         <activity android:name=".logueado" />
