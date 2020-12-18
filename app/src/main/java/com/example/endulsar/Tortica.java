@@ -18,7 +18,7 @@ public class Tortica {
         this.id = id;
     }
 
-    public String getImagen() {
+    public String getImagen(int position) {
         return imagen;
     }
 

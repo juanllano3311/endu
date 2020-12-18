@@ -1,8 +1,12 @@
 package com.example.endulsar;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -10,9 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.squareup.picasso.Picasso;
 
 
-public class adapterTortica extends FirestoreRecyclerAdapter <Tortica, adapterTortica.ViewHolder>{
+public class adapterTortica extends FirestoreRecyclerAdapter <Tortica, adapterTortica.ViewHolder> {
 
 
 public adapterTortica(@NonNull FirestoreRecyclerOptions <Tortica> options) {
@@ -22,14 +27,29 @@ public adapterTortica(@NonNull FirestoreRecyclerOptions <Tortica> options) {
 @Override
 protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull Tortica model) {
 
-        holder.id.setText(model.getId());
+
         holder.nombre.setText(model.getNombre());
         holder.precio.setText(model.getPrecio());
-        holder.capacidad.setText(model.getCapacidad());
+    
+        
 
+    Picasso
+            .get()
+            .load(model.getImagen(position))
+            .resize(200, 200)
+            .placeholder(R.drawable.ic_launcher_background)  // precargado
+            .error(R.drawable.ic_launcher_foreground)        // error de carga
+            .into(holder.imagen);
+
+
+
+    holder.setOnClickListeners();
+
+
+ 
         }
 
-@NonNull
+
 @Override
 public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
@@ -38,21 +58,48 @@ public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         }
 
-public class ViewHolder extends RecyclerView.ViewHolder {
+  
 
-    TextView id,nombre,precio,capacidad;
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+
+    Context context;
+    TextView nombre,precio;
+    ImageView imagen;
+    Button pedir;
 
     public ViewHolder(@NonNull View itemView) {
         super(itemView);
 
-        id = itemView.findViewById(R.id.tvidtortica);
+        context = itemView.getContext();
         nombre = itemView.findViewById(R.id.tvnombretortica);
         precio = itemView.findViewById(R.id.tvpreciotortica);
-        capacidad = itemView.findViewById(R.id.tvcapaciddtortica);
+        imagen = itemView.findViewById(R.id.etimagentorti);
+        pedir = itemView.findViewById(R.id.btnpedir);
+        
+
+        
+
 
     }
-}
+
+        public void setOnClickListeners() {
+
+            pedir.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+
+                switch (v.getId()){
+                    case R.id.btnpedir:
+                        context.startActivity(new Intent(context, pedido.class));
+                        break;
+                }
+            }
+
+
+        }
+    }
 
 
 
-}

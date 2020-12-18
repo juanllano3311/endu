@@ -59,6 +59,15 @@
                         android:layout_marginLeft="10dp"
                         android:textColor="#785616"
                         />
+                    <Button
+                        android:id="@+id/btnpedirmini"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="Pedir."
+                        android:backgroundTint="#f4eb49"
+                        android:textColor="#785616"
+                        android:textSize="12dp" />
 
 
 

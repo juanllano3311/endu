@@ -1,8 +1,11 @@
 package com.example.endulsar;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -41,6 +44,7 @@ public class adapterMinipersonal extends FirestoreRecyclerAdapter <Minipersonal,
                 .into(holder.imagen);
 
 
+        holder.setOnClickListeners();
     }
 
     @NonNull
@@ -52,18 +56,34 @@ public class adapterMinipersonal extends FirestoreRecyclerAdapter <Minipersonal,
 
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
+        Context context;
         TextView nombre,precio;
         ImageView imagen;
+        Button pedir;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-
+            context = itemView.getContext();
             nombre = itemView.findViewById(R.id.tvnombreminipersonal);
             precio = itemView.findViewById(R.id.tvpreciominipersonal);
            imagen = itemView.findViewById(R.id.etimagen);
+           pedir = itemView.findViewById(R.id.btnpedirmini);
 
+        }
+
+        public void setOnClickListeners() {
+            pedir.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()){
+                case R.id.btnpedirmini:
+                    context.startActivity(new Intent(context, pedido.class));
+                    break;
+            }
         }
     }
 

@@ -5,6 +5,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Toast;
 
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -36,6 +39,9 @@ public class listar_minipersonal extends AppCompatActivity {
         minipersonaladpter.notifyDataSetChanged();
 
         recyclerMinipersonal.setAdapter(minipersonaladpter);
+
+
+
 
     }
 
