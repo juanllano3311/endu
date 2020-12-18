@@ -16,7 +16,7 @@ public class listar_cupcakes extends AppCompatActivity {
 
     RecyclerView recyclerCupcakes;
 
-    adapterMinipersonal cupcakesadpter;
+    adapterCupcakes cupcakesadpter;
     FirebaseFirestore cupcakesfirestore;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +31,10 @@ public class listar_cupcakes extends AppCompatActivity {
 
         Query query = cupcakesfirestore.collection("Cupcake");
 
-        FirestoreRecyclerOptions <Minipersonal> firestoreRecyclerOptions = new FirestoreRecyclerOptions.Builder <Minipersonal> ()
-                .setQuery(query,Minipersonal.class).build();
+        FirestoreRecyclerOptions <Cupcakes> firestoreRecyclerOptions = new FirestoreRecyclerOptions.Builder <Cupcakes> ()
+                .setQuery(query,Cupcakes.class).build();
 
-        cupcakesadpter = new adapterMinipersonal(firestoreRecyclerOptions);
+        cupcakesadpter = new adapterCupcakes(firestoreRecyclerOptions);
 
         cupcakesadpter.notifyDataSetChanged();
 
