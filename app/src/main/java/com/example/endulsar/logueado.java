@@ -16,13 +16,14 @@ public class logueado extends AppCompatActivity {
     public static final String correo="correo";
     public static final String nombre="nombre";
 
-    ImageView torticas,minipersonal;
+    ImageView torticas,minipersonal,cupcake2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logueado);
         torticas=findViewById(R.id.imgtoritcas);
         minipersonal=findViewById(R.id.imgminipersonal);
+        cupcake2=findViewById(R.id.imgcupcake);
 
 
         torticas.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +38,13 @@ public class logueado extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),listar_minipersonal.class));
+            }
+        });
+
+        cupcake2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),listar_cupcakes.class));
             }
         });
 

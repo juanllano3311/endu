@@ -11,6 +11,7 @@
         android:theme="@style/Theme.Endulsar">
         <activity android:name=".listarTortica"></activity>
         <activity android:name=".listar_minipersonal" />
+        <activity android:name=".listar_cupcakes" />
         <activity android:name=".pedido" />
         <activity android:name=".logueado" />
         <activity android:name=".registrou" />
