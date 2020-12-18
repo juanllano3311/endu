@@ -82,6 +82,10 @@ public class adapterMinipersonal extends FirestoreRecyclerAdapter <Minipersonal,
             switch (v.getId()){
                 case R.id.btnpedirmini:
                     context.startActivity(new Intent(context, pedido.class));
+                    Intent intent = new Intent(context, pedido.class);
+                    intent.putExtra("nombrep", nombre.getText());
+                    intent.putExtra("preciop", precio.getText());
+                    context.startActivity(intent);
                     break;
             }
         }

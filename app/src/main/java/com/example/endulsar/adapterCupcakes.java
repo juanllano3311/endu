@@ -82,7 +82,13 @@ public class adapterCupcakes extends FirestoreRecyclerAdapter <Cupcakes, adapter
         public void onClick(View v) {
             switch (v.getId()){
                 case R.id.btnpedircupcake:
-                    context.startActivity(new Intent(context, pedido.class));
+                    context.startActivity(new Intent(context, pedidoCupcakes.class));
+                    Intent intent = new Intent(context, pedidoCupcakes.class);
+                    intent.putExtra("nombrep", nombre.getText());
+                    intent.putExtra("preciop", preciox6.getText());
+                    intent.putExtra("preciop", preciox9.getText());
+
+                    context.startActivity(intent);
                     break;
             }
         }

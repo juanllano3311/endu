@@ -93,6 +93,10 @@ public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                 switch (v.getId()){
                     case R.id.btnpedir:
                         context.startActivity(new Intent(context, pedido.class));
+                        Intent intent = new Intent(context, pedido.class);
+                        intent.putExtra("nombrep", nombre.getText());
+                        intent.putExtra("preciop", precio.getText());
+                        context.startActivity(intent);
                         break;
                 }
             }

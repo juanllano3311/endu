@@ -82,6 +82,10 @@ public class adapterMinicake extends FirestoreRecyclerAdapter <Minicake, adapter
             switch (v.getId()){
                 case R.id.btnpedirminicake:
                     context.startActivity(new Intent(context, pedido.class));
+                    Intent intent = new Intent(context, pedido.class);
+                    intent.putExtra("nombrep", nombre.getText());
+                    intent.putExtra("preciop", precio.getText());
+                    context.startActivity(intent);
                     break;
             }
         }
